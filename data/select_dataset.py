@@ -1,5 +1,5 @@
-
-
+from data.dataset_video_train import DatasetVideoTrain       
+                                                                    #MODIFIED
 '''
 # --------------------------------------------
 # select dataset
@@ -86,6 +86,17 @@ def define_Dataset(dataset_opt):
 
     elif dataset_type in ['plainpatch']:
         from data.dataset_plainpatch import DatasetPlainPatch as D
+    
+    # --- ADD THIS BLOCK FOR YOUR PROJECT ---
+    elif dataset_type == 'video_train':
+        from data.dataset_video_train import DatasetVideoTrain as D
+        dataset = D(dataset_opt)
+    # ---------------------------------------                                           #MODIFIED
+
+    # If you also need video_test for validation later
+    elif dataset_type == 'video_test':
+        from data.dataset_video_test import DatasetVideoTest as D
+        dataset = D(dataset_opt)
 
     else:
         raise NotImplementedError('Dataset [{:s}] is not found.'.format(dataset_type))

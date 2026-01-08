@@ -1,0 +1,1539 @@
+26-01-07 21:46:53.097 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 21:58:34.778 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:00:30.969 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:03:15.691 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:07:18.161 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:07:18.239 : Number of train images: 6, iters: 6
+26-01-07 22:09:24.897 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:09:24.971 : Number of train images: 6, iters: 6
+26-01-07 22:13:36.658 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:13:36.731 : Number of train images: 6, iters: 6
+26-01-07 22:16:37.202 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:16:37.272 : Number of train images: 6, iters: 6
+26-01-07 22:19:20.859 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:19:20.929 : Number of train images: 6, iters: 6
+26-01-07 22:21:14.456 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+    init_type: default
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:21:14.526 : Number of train images: 6, iters: 6
+26-01-07 22:25:15.957 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+    init_type: default
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:25:16.027 : Number of train images: 6, iters: 6
+26-01-07 22:25:17.224 : 
+Networks name: RVRT
+Params number: 84
+Net structure:
+RVRT(
+  (conv): Conv2d(3, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)
+
+26-01-07 22:25:17.226 : 
+ |  mean  |  min   |  max   |  std   || shape               
+ | -0.004 | -0.184 |  0.191 |  0.113 | torch.Size([3, 3, 3, 3]) || conv.weight
+ |  0.042 | -0.192 |  0.171 |  0.203 | torch.Size([3]) || conv.bias
+
+26-01-07 22:28:10.563 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+    init_type: default
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:28:10.633 : Number of train images: 6, iters: 6
+26-01-07 22:28:11.822 : 
+Networks name: RVRT
+Params number: 84
+Net structure:
+RVRT(
+  (conv): Conv2d(3, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)
+
+26-01-07 22:28:11.823 : 
+ |  mean  |  min   |  max   |  std   || shape               
+ | -0.004 | -0.184 |  0.191 |  0.113 | torch.Size([3, 3, 3, 3]) || conv.weight
+ |  0.042 | -0.192 |  0.171 |  0.203 | torch.Size([3]) || conv.bias
+
+26-01-07 22:34:42.177 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+    init_type: default
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:34:42.251 : Number of train images: 6, iters: 6
+26-01-07 22:34:43.373 : 
+Networks name: RVRT
+Params number: 84
+Net structure:
+RVRT(
+  (conv): Conv2d(3, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)
+
+26-01-07 22:34:43.374 : 
+ |  mean  |  min   |  max   |  std   || shape               
+ | -0.004 | -0.184 |  0.191 |  0.113 | torch.Size([3, 3, 3, 3]) || conv.weight
+ |  0.042 | -0.192 |  0.171 |  0.203 | torch.Size([3]) || conv.bias
+
+26-01-07 22:36:38.631 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+    init_type: default
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:36:38.701 : Number of train images: 6, iters: 6
+26-01-07 22:36:39.861 : 
+Networks name: RVRT
+Params number: 84
+Net structure:
+RVRT(
+  (conv): Conv2d(3, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)
+
+26-01-07 22:36:39.861 : 
+ |  mean  |  min   |  max   |  std   || shape               
+ | -0.004 | -0.184 |  0.191 |  0.113 | torch.Size([3, 3, 3, 3]) || conv.weight
+ |  0.042 | -0.192 |  0.171 |  0.203 | torch.Size([3]) || conv.bias
+
+26-01-07 22:38:02.106 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+    init_type: default
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:38:02.176 : Number of train images: 6, iters: 6
+26-01-07 22:38:03.289 : 
+Networks name: RVRT
+Params number: 84
+Net structure:
+RVRT(
+  (conv): Conv2d(3, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)
+
+26-01-07 22:38:03.290 : 
+ |  mean  |  min   |  max   |  std   || shape               
+ | -0.004 | -0.184 |  0.191 |  0.113 | torch.Size([3, 3, 3, 3]) || conv.weight
+ |  0.042 | -0.192 |  0.171 |  0.203 | torch.Size([3]) || conv.bias
+
+26-01-07 22:40:02.036 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+    init_type: default
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    checkpoint_print: 1
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:40:02.111 : Number of train images: 6, iters: 6
+26-01-07 22:40:03.223 : 
+Networks name: RVRT
+Params number: 84
+Net structure:
+RVRT(
+  (conv): Conv2d(3, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)
+
+26-01-07 22:40:03.223 : 
+ |  mean  |  min   |  max   |  std   || shape               
+ | -0.004 | -0.184 |  0.191 |  0.113 | torch.Size([3, 3, 3, 3]) || conv.weight
+ |  0.042 | -0.192 |  0.171 |  0.203 | torch.Size([3]) || conv.bias
+
+26-01-07 22:40:03.259 : <epoch:  0, iter:       1, lr:1.000e-04> G_loss: 4.004e-02 
+26-01-07 22:40:03.313 : <epoch:  0, iter:       2, lr:1.000e-04> G_loss: 4.000e-02 
+26-01-07 22:40:03.339 : <epoch:  0, iter:       3, lr:1.000e-04> G_loss: 3.991e-02 
+26-01-07 22:44:52.099 :   task: DEBUG_RUN
+  model: plain
+  gpu_ids: []
+  dist: False
+  n_channels: 3
+  path:[
+    root: output
+    pretrained_netG: None
+    strict_load: False
+    task: output\DEBUG_RUN
+    log: output\DEBUG_RUN
+    options: output\DEBUG_RUN\options
+    models: output\DEBUG_RUN\models
+    images: output\DEBUG_RUN\images
+    pretrained_netE: None
+    pretrained_optimizerG: None
+  ]
+  datasets:[
+    train:[
+      name: train_dataset
+      dataset_type: video_train
+      dataroot_gt: dummy_data/GT
+      dataroot_lq: dummy_data/LQ_ROI
+      dataroot_mask: dummy_data/Mask
+      num_frame: 6
+      gt_size: 64
+      use_shuffle: True
+      dataloader_shuffle: True
+      dataloader_num_workers: 0
+      dataloader_batch_size: 1
+      phase: train
+      scale: 1
+      n_channels: 3
+    ]
+  ]
+  netG:[
+    net_type: rvrt
+    scale: 1
+    num_in_ch: 3
+    num_out_ch: 3
+    embed_dim: 96
+    num_heads: [6, 6, 6]
+    deformable_groups: 12
+    attention_heads: 12
+    attention_window: [3, 3]
+    depth: [2, 2, 2]
+    num_clips: 1
+    init_type: default
+  ]
+  train:[
+    manual_seed: 0
+    G_lossfn_type: charbonnier
+    G_lossfn_weight: 1.0
+    E_decay: 0.999
+    G_optimizer_type: adam
+    G_optimizer_lr: 0.0001
+    G_scheduler_type: MultiStepLR
+    G_scheduler_milestones: [5000]
+    G_scheduler_gamma: 0.5
+    checkpoint_test: 10
+    checkpoint_save: 10
+    checkpoint_print: 1
+    F_feature_layer: 34
+    F_weights: 1.0
+    F_lossfn_type: l1
+    F_use_input_norm: True
+    F_use_range_norm: False
+    G_optimizer_betas: [0.9, 0.999]
+    G_scheduler_restart_weights: 1
+    G_optimizer_wd: 0
+    G_optimizer_reuse: False
+    G_param_strict: True
+    E_param_strict: True
+  ]
+  opt_path: options/debug_local.json
+  is_train: True
+  merge_bn: False
+  merge_bn_startpoint: -1
+  scale: 1
+  find_unused_parameters: False
+  use_static_graph: False
+  num_gpu: 0
+  rank: 0
+  world_size: 1
+
+26-01-07 22:44:52.173 : Number of train images: 6, iters: 6
+26-01-07 22:44:53.430 : 
+Networks name: RVRT
+Params number: 84
+Net structure:
+RVRT(
+  (conv): Conv2d(3, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+)
+
+26-01-07 22:44:53.430 : 
+ |  mean  |  min   |  max   |  std   || shape               
+ | -0.004 | -0.184 |  0.191 |  0.113 | torch.Size([3, 3, 3, 3]) || conv.weight
+ |  0.042 | -0.192 |  0.171 |  0.203 | torch.Size([3]) || conv.bias
+
+26-01-07 22:44:53.477 : <epoch:  0, iter:       1, lr:1.000e-04> G_loss: 4.004e-02 
+26-01-07 22:44:53.515 : <epoch:  0, iter:       2, lr:1.000e-04> G_loss: 4.000e-02 
+26-01-07 22:44:53.549 : <epoch:  0, iter:       3, lr:1.000e-04> G_loss: 3.991e-02 
+26-01-07 22:44:53.599 : <epoch:  0, iter:       4, lr:1.000e-04> G_loss: 4.003e-02 
+26-01-07 22:44:53.627 : <epoch:  0, iter:       5, lr:1.000e-04> G_loss: 3.999e-02 
+26-01-07 22:44:53.656 : <epoch:  0, iter:       6, lr:1.000e-04> G_loss: 3.990e-02 
+26-01-07 22:44:53.683 : <epoch:  1, iter:       7, lr:1.000e-04> G_loss: 3.991e-02 
+26-01-07 22:44:53.714 : <epoch:  1, iter:       8, lr:1.000e-04> G_loss: 3.982e-02 
+26-01-07 22:44:53.743 : <epoch:  1, iter:       9, lr:1.000e-04> G_loss: 3.973e-02 
+26-01-07 22:44:53.772 : <epoch:  1, iter:      10, lr:1.000e-04> G_loss: 3.979e-02 
+26-01-07 22:44:53.772 : Saving the model.

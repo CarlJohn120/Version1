@@ -1,0 +1,102 @@
+{
+  "task": "DEBUG_CDNET",
+  "model": "plain",
+  "gpu_ids": [],
+  "dist": false,
+  "n_channels": 3,
+  "path": {
+    "root": "output",
+    "pretrained_netG": "output\\DEBUG_CDNET\\models\\200_G.pth",
+    "strict_load": false,
+    "task": "output\\DEBUG_CDNET",
+    "log": "output\\DEBUG_CDNET",
+    "options": "output\\DEBUG_CDNET\\options",
+    "models": "output\\DEBUG_CDNET\\models",
+    "images": "output\\DEBUG_CDNET\\images",
+    "pretrained_netE": "output\\DEBUG_CDNET\\models\\200_E.pth",
+    "pretrained_optimizerG": null
+  },
+  "datasets": {
+    "train": {
+      "name": "train_dataset",
+      "dataset_type": "video_train",
+      "dataroot_gt": "Thesis_Data_Local/GT",
+      "dataroot_lq": "Thesis_Data_Local/LQ_ROI",
+      "dataroot_mask": "Thesis_Data_Local/Mask",
+      "num_frame": 6,
+      "gt_size": 64,
+      "use_shuffle": true,
+      "dataloader_shuffle": true,
+      "dataloader_num_workers": 0,
+      "dataloader_batch_size": 1,
+      "phase": "train",
+      "scale": 1,
+      "n_channels": 3
+    }
+  },
+  "netG": {
+    "net_type": "rvrt",
+    "scale": 1,
+    "num_in_ch": 3,
+    "num_out_ch": 3,
+    "embed_dim": 96,
+    "num_heads": [
+      6,
+      6,
+      6
+    ],
+    "deformable_groups": 12,
+    "attention_heads": 12,
+    "attention_window": [
+      3,
+      3
+    ],
+    "depth": [
+      2,
+      2,
+      2
+    ],
+    "num_clips": 1,
+    "init_type": "default"
+  },
+  "train": {
+    "manual_seed": 0,
+    "G_lossfn_type": "charbonnier",
+    "G_lossfn_weight": 1.0,
+    "E_decay": 0.999,
+    "G_optimizer_type": "adam",
+    "G_optimizer_lr": 0.0001,
+    "G_scheduler_type": "MultiStepLR",
+    "G_scheduler_milestones": [
+      5000
+    ],
+    "G_scheduler_gamma": 0.5,
+    "checkpoint_test": 100,
+    "checkpoint_save": 100,
+    "checkpoint_print": 1,
+    "G_optimizer_betas": [
+      0.9,
+      0.999
+    ],
+    "G_optimizer_wd": 0,
+    "G_param_strict": true,
+    "E_param_strict": true,
+    "F_feature_layer": 34,
+    "F_weights": 1.0,
+    "F_lossfn_type": "l1",
+    "F_use_input_norm": true,
+    "F_use_range_norm": false,
+    "G_scheduler_restart_weights": 1,
+    "G_optimizer_reuse": false
+  },
+  "opt_path": "options/debug_cdnet.json",
+  "is_train": true,
+  "merge_bn": false,
+  "merge_bn_startpoint": -1,
+  "scale": 1,
+  "find_unused_parameters": false,
+  "use_static_graph": false,
+  "num_gpu": 0,
+  "rank": 0,
+  "world_size": 1
+}

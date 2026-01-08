@@ -9,7 +9,12 @@ class ModelBase():
     def __init__(self, opt):
         self.opt = opt                         # opt
         self.save_dir = opt['path']['models']  # save models
-        self.device = torch.device('cuda' if opt['gpu_ids'] is not None else 'cpu')
+        # Force CPU if CUDA is not available on this machine
+        if opt['gpu_ids'] is not None and len(opt['gpu_ids']) > 0 and torch.cuda.is_available():
+            self.device = torch.device('cuda')
+        else:
+            self.device = torch.device('cpu')
+            print("Warning: CUDA not found or gpu_ids is empty. Forcing CPU mode.")
         self.is_train = opt['is_train']        # training or not
         self.schedulers = []                   # schedulers
 
