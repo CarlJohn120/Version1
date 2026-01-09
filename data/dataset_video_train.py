@@ -123,7 +123,13 @@ class DatasetVideoTrain(data.Dataset):
         # 4. To Tensor
         img_H = torch.from_numpy(np.ascontiguousarray(img_H)).permute(0, 3, 1, 2).float() / 255.
         img_L = torch.from_numpy(np.ascontiguousarray(img_L)).permute(0, 3, 1, 2).float() / 255.
+        # --- FIX START ---
+        # If the mask is grayscale (Time, H, W), add a channel dimension to make it (Time, H, W, 1)
+        if img_M.ndim == 3:
+            img_M = img_M[..., None] 
+        
         img_M = torch.from_numpy(np.ascontiguousarray(img_M)).permute(0, 3, 1, 2).float() / 255.
+        # --- FIX END ---
 
         # 5. Process Mask Weights
         weights = img_M.clone()
