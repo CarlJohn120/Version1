@@ -86,21 +86,32 @@ class ModelPlain(ModelBase):
         self.G_optimizer.zero_grad()
         self.E = self.netG(self.L)
         
-        # MASKED LOSS LOGIC
-        mask_weights = self.data['M'].to(self.device)
+        # --- THESIS LOGIC START ---
+        # 1. Load Mask (Range 0 to 1)
+        # KAIR loaders usually load masks as [0, 1] float tensors.
+        mask = self.data['M'].to(self.device)
 
+        # 2. Calculate Thesis Weights
+        # Object (1.0) gets 100% weight
+        # Background (0.0) gets 20% weight (0.2)
+        # Formula: Weight = (Mask * 1.0) + ((1 - Mask) * 0.2)
+        thesis_weights = mask * 1.0 + (1.0 - mask) * 0.2
+
+        # 3. Calculate Basic Pixel Loss (L1 or Charbonnier)
         if self.opt['train']['G_lossfn_type'] == 'charbonnier':
             eps = 1e-12
             diff = torch.add(self.E, -self.H)
             error = torch.sqrt(diff * diff + eps)
-            weighted_error = error * mask_weights
-            loss_G_total = torch.mean(weighted_error)
         elif self.opt['train']['G_lossfn_type'] == 'l1':
-            diff = torch.abs(self.E - self.H)
-            weighted_error = diff * mask_weights
-            loss_G_total = torch.mean(weighted_error)
+            error = torch.abs(self.E - self.H)
         else:
-            loss_G_total = self.netG_loss(self.E, self.H)
+            # Fallback for other losses (MSE, etc)
+            error = torch.abs(self.E - self.H)
+
+        # 4. Apply Thesis Weights to the Error
+        weighted_error = error * thesis_weights
+        loss_G_total = torch.mean(weighted_error)
+        # --- THESIS LOGIC END ---
 
         loss_G_total.backward()
         self.G_optimizer.step()
