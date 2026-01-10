@@ -193,7 +193,7 @@ def prepare_model_dataset(args):
         args.nonblind_denoising = True
 
     # download model
-    model_path = f'model_zoo/rvrt/{args.task}.pth'
+    model_path = '/content/drive/MyDrive/Thesis/KAIR/output/DEBUG_CDNET/models/100_G.pth'
     if os.path.exists(model_path):
         print(f'loading model from ./model_zoo/rvrt/{model_path}')
     else:
@@ -203,7 +203,7 @@ def prepare_model_dataset(args):
         print(f'downloading model {model_path}')
         open(model_path, 'wb').write(r.content)
 
-    pretrained_model = torch.load(model_path)
+    pretrained_model = torch.load(model_path, weights_only=False)
     model.load_state_dict(pretrained_model['params'] if 'params' in pretrained_model.keys() else pretrained_model, strict=True)
 
     # download datasets
